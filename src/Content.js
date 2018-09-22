@@ -1,65 +1,25 @@
 import React from "react";
+import Server from "./Server.js"
 
-export default () => (
-  <div className="section">
-    <div className="card">
-      <div className="card-header">
-        <p className="card-header-title">Header</p>
-      </div>
-      <div className="card-content">
-        <div className="content">Content</div>
-      </div>
-    </div>
-    <br />
+const left = data => {
+    var half = Math.ceil(data.length / 2);
+    return data.splice(0, half).map(s => <Server data={s} />) 
+}
 
-    <div className="card is-hidden1">
-      <div className="card-header">
-        <p className="card-header-title">Header</p>
-      </div>
-      <div className="card-content">
-        <div className="content">Content</div>
-      </div>
-    </div>
-    <br />
+const right = data => {
+    console.log(data)
+    var half = Math.floor(data.length / 2);
+    return data.splice(half, data.length).map(s => <Server data={s} />) 
+}
 
-    <div className="card is-hidden1">
-      <div className="card-header">
-        <p className="card-header-title">Header</p>
-      </div>
-      <div className="card-content">
-        <div className="content">Content</div>
-      </div>
-    </div>
-    <br />
-
-    <div className="card is-hidden1">
-      <div className="card-header">
-        <p className="card-header-title">Header</p>
-      </div>
-      <div className="card-content">
-        <div className="content">Content</div>
-      </div>
-    </div>
-    <br />
-
-    <div className="card is-hidden1">
-      <div className="card-header">
-        <p className="card-header-title">Header</p>
-      </div>
-      <div className="card-content">
-        <div className="content">Content</div>
-      </div>
-    </div>
-    <br />
-
-    <div className="card is-hidden1">
-      <div className="card-header">
-        <p className="card-header-title">Header</p>
-      </div>
-      <div className="card-content">
-        <div className="content">Content</div>
-      </div>
-    </div>
-    <br />
-  </div>
-);
+export default (props) => (
+    <div className="container column is-9">
+        <div className="container columns ">
+            <div className="container column is-6">
+                {left(props.data)}
+            </div>
+            <div className="container column is-6">
+                {right(props.data)}
+            </div>
+        </div>
+    </div>);

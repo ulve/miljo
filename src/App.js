@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar.js";
 import data from './data.js'
 
 const menyData = data.miljöer.map(m => ({ miljö: m.miljö, servrar: m.servrar.map(s => s.server) }) )
+const miljö = data.miljöer[0];
 
 class App extends Component {
   render() {
@@ -14,9 +15,8 @@ class App extends Component {
            
               <Sidebar data={menyData} />
             
-            <div className="container column is-9">
-              <Content />
-            </div>
+              <Content data={miljö.servrar}/>
+            
           </section>
         </div>
       </div>
