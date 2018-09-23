@@ -7,7 +7,6 @@ const left = data => {
 }
 
 const right = data => {
-    console.log(data)
     var half = Math.floor(data.length / 2);
     return data.splice(half, data.length).map(s => <Server data={s} />) 
 }
