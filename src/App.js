@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar.js";
 import jsyaml from "js-yaml";
 
 const url =
-  "https://gist.githubusercontent.com/ulve/3d07cecf44e8750ea8e7751260bebd81/raw/e251619480db07f8c62c39eeea9c48f7ee434853/milj%25C3%25B6er.yaml";
+  "https://gist.githubusercontent.com/ulve/3d07cecf44e8750ea8e7751260bebd81/raw/ead637df9d1c4081df68d34341c48f63828fa240/milj%25C3%25B6er.yaml";
 
 const menyData = data =>
   data.miljöer.map(m => ({
