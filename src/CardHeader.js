@@ -19,8 +19,8 @@ export default props => {
         onClick={props.onClick}
       >
         <span className="icon">
-        {props.expanded ? <FontAwesomeIcon icon="angle-up" />
-                        : <FontAwesomeIcon icon="angle-down" />}
+        {props.expanded ? <FontAwesomeIcon icon="angle-down" />
+                        : <FontAwesomeIcon icon="angle-right" />}
             
         </span>
       </a>

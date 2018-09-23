@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faServer, faHdd, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faServer, faHdd, faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faServer)
 library.add(faHdd)
-library.add(faAngleUp)
+library.add(faAngleRight)
 library.add(faAngleDown)
 
 
