@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Content from "./Content";
+import Content from "./Content.js";
 import Sidebar from "./Sidebar.js";
 import data from './data.js'
 
 const menyData = data.miljöer.map(m => ({ miljö: m.miljö, servrar: m.servrar.map(s => s.server) }) )
-const miljö = data.miljöer[0];
+const miljöer = data.miljöer;
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
            
               <Sidebar data={menyData} />
             
-              <Content data={miljö.servrar}/>
+              <Content data={miljöer}/>
             
           </section>
         </div>

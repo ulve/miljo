@@ -1,8 +1,10 @@
 import React from "react";
+import CardHeader from "./CardHeader.js";
 
 const renderSimple = (title, item) => (
   <div key={item}>
-    <h2 className="subtitle">{title}</h2>
+  <br />
+    <p className="subtitle has-text-centered">{title}</p>
     {item}{" "}
   </div>
 );
@@ -28,8 +30,9 @@ const renderCell = item => {
 
 const renderList = (title, list) => (
   <div key={title}>
-    <h2 className="subtitle">{title}</h2>
-    <table className="table is-hoverable is-striped">
+  <br />
+    <p className="subtitle has-text-centered">{title}</p>
+    <table className="table is-hoverable is-striped is-fullwidth">
     <thead>
       <tr>
         <th>Info</th>
@@ -61,24 +64,13 @@ const fofo = item => {
   });
 };
 
-const header = name => (
-  <header className="card-header">
-    <p className="card-header-title">
-      <span className="icon is-medium">
-        <i className="fas fa-server" />
-      </span>
-      {name}
-    </p>
-  </header>
-);
-
 const content = data => <div className="card-content">{fofo(data)}</div>;
 
 const card = data => (
   <div className="card">
-    {header("nb11210")}
+  <CardHeader title={data.server} />
     {content(data)}
   </div>
 );
 
-export default props => <div>{card(props.data)}</div>;
+export default props => <section>{card(props.data)}</section>;

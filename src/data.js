@@ -110,8 +110,8 @@ export default {
       miljö: "KSIT",
       servrar: [
         {
-          server: "nb11420",
-          dns: "nb11420.rsvb.se",
+          server: "nb11444",
+          dns: "nb11444.rsvb.se",
           typ: ["windows", "applikationsserver"],
           länkar: [
             {
@@ -140,23 +140,12 @@ export default {
           ],
           "schemalagda jobb": [
             "Rapportgenerator",
-            {
-              Bevakningstjänst: null,
-              schema: [
-                14400,
-                {
-                  "21600": "Övberlämning till domstol"
-                },
-                {
-                  "28800": "Färdigställ utslag"
-                }
-              ]
-            }
+            "Bevakningstjänst"
           ]
         },
         {
-          server: "nb11421",
-          dns: "nb11421.rsvb.se",
+          server: "nb11445",
+          dns: "nb11445.rsvb.se",
           typ: ["windows", "applikationsserver"],
           länkar: [
             {
