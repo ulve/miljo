@@ -22,7 +22,8 @@ export default class Server extends React.Component {
       <div className="card">
         <CardHeader title={this.props.data.server} 
         expanded={this.state.expanded} 
-        onClick={this.onClick}/>
+        onClick={this.onClick}
+        expandable={true}/>
         <CardServerContent data={this.filter(this.props.data)} />
       </div>
     </section>;

@@ -16,6 +16,7 @@ export default props => (
       aria-label="more options"
       onClick={props.onClick}
     >
+    { props.expandable &&
       <span className="icon">
         {props.expanded ? (
           <FontAwesomeIcon icon="angle-down" />
@@ -23,6 +24,7 @@ export default props => (
           <FontAwesomeIcon icon="angle-right" />
         )}
       </span>
+    }
     </a>
   </header>
 );
