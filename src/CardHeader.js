@@ -1,10 +1,7 @@
 import React from "react";
-const updown = expanded => {
-  let a = "fas fa-angle-up";
-  if (expanded) a = "fas fa-angle-down";
 
-  return a;
-};
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export default props => {
   console.log(props.expanded);
   return (
@@ -22,7 +19,9 @@ export default props => {
         onClick={props.onClick}
       >
         <span className="icon">
-          <i className={updown(props.expanded)} aria-hidden="true" />
+        {props.expanded ? <FontAwesomeIcon icon="angle-up" />
+                        : <FontAwesomeIcon icon="angle-down" />}
+            
         </span>
       </a>
     </header>
