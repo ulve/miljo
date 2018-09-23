@@ -1,5 +1,7 @@
 import React from "react";
 
+const formatIfUrl = item => item.startsWith("http") ? <a href={item}>{item}</a> : item
+
 const renderSimple = (title, item) => (
     <div key={item}>
     <br />
@@ -20,7 +22,7 @@ const renderSimple = (title, item) => (
     if (item instanceof Object && !(item instanceof Array)) {
       return (
         <tr key={Object.keys(item)[0]}>
-          <td>{item[Object.keys(item)[0]]}</td>
+          <td>{formatIfUrl(item[Object.keys(item)[0]])}</td>
           <td>{item[Object.keys(item)[1]]}</td>
         </tr>
       );
