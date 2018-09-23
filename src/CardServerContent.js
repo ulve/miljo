@@ -1,6 +1,6 @@
 import React from "react";
 
-const formatIfUrl = item => item.startsWith("http") ? <a href={item}>{item}</a> : item
+const formatIfUrl = item => (item !== null &&item.startsWith("http")) ? <a href={item}>{item}</a> : item
 
 const renderSimple = (title, item) => (
     <div key={item}>
