@@ -22,9 +22,13 @@ class App extends Component {
         <div>
           <section className="main-content columns is-fullheight">
             <Sidebar data={menyData(this.state.data)} />
-<div>
-          {this.state.data.miljöer.map(e => <section><Environment data={e} /></section>)}
-</div>
+            <div>
+              {this.state.data.miljöer.map(e => (
+                <section>
+                  <Environment data={e} />
+                </section>
+              ))}
+            </div>
           </section>
         </div>
       </div>
