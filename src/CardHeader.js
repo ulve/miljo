@@ -5,10 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default props => (
   <header className="card-header" id={props.title}>
     <p className="card-header-title">
-      <span className="card-header-icon">
-        <i className="fas fa-hdd" />
-      </span>
-      {props.title}
+      <FontAwesomeIcon icon="hdd" />
+      <span>&nbsp;{props.title}</span>
     </p>
     <a
       href="#"
