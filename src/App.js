@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Content from "./Content.js";
+import Environment from "./Environment.js";
 import Sidebar from "./Sidebar.js";
 import jsyaml from "js-yaml";
 
@@ -23,7 +23,8 @@ class App extends Component {
           <section className="main-content columns is-fullheight">
             <Sidebar data={menyData(this.state.data)} />
 
-            <Content data={miljöer(this.state.data)} />
+          {this.state.data.miljöer.map(e => <section><Environment data={e} /></section>)}
+
           </section>
         </div>
       </div>
